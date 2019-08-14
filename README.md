@@ -1,1 +1,1 @@
-# shell_test
+# This is a directory for privately practice.
