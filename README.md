@@ -1,1 +1,1 @@
-# This is a directory for privately practice.
+# This is a directory for privately practicing.
