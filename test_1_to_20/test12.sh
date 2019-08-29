@@ -14,7 +14,7 @@ echo    "判断的值为: "$judge
 
 if [ ! -n "$permission" ];then  #没有acl权限,则判断是否是属主或属组
 
-        if [ $user_name==$file_user ];then      #为属主,有读写权限
+        if [ $user_name == $file_user ];then      #为属主,有读写权限
                 echo "用户${user_name}有读权限"
                 echo "用户${user_name}有写权限"
                 echo "用户${user_name}无执行权限"
@@ -34,17 +34,17 @@ else    #有acl权限,则判断有哪几个
         p_w=${permission:1:1}
         p_x=${permission:2:1}
         echo $p_r $p_w $p_x
-        if [ "${p_r}"="r" ];then
+        if [ "${p_r}" == "r" ];then
                 echo "用户${user_name}有读权限"
         else
                 echo "用户${user_name}无读权限"
         fi
-        if [ "${p_w}"="w" ];then
+        if [ "${p_w}" == "w" ];then
                 echo "用户${user_name}有写权限"
         else
                 echo "用户${user_name}无写权限"
         fi
-        if [ "${p_x}"="x" ];then
+        if [ "${p_x}" == "x" ];then
                 echo "用户${user_name}有执行权限"
         else
                 echo "用户${user_name}无执行权限"
